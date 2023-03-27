@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { Component, useState, useEffect, useRef } from 'react'
 import axios from 'axios'
 import Feed from './Feed'
 
@@ -7,10 +7,9 @@ const InstagramCalls = (props) => {
   useEffect(() => {
     const options = {
       method: 'GET',
-      url: 'https://localhost:8000/insta'
+      url: 'http://localhost:8000/insta'
     }
     async function fetchInstagramPost() {
-
       axios
         .request(options)
         .then((response) => {
@@ -22,10 +21,11 @@ const InstagramCalls = (props) => {
     }
     fetchInstagramPost();
   }, [])
-  // }, [props.limit])
+  // // }, [props.limit])
 
   return (
     <div className="container">
+      <h1>Test</h1>
       {feeds.data?.map((data, _index) => (
         <div key={_index}>
           <Feed key={data.id} feed={data} />
