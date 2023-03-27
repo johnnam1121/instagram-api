@@ -9,7 +9,7 @@ function App() {
       <h1>Instagram Test</h1>
       {/* <InstagramCalls token={process.env.REACT_APP_INS_TOKEN} limit={12} /> */}
 
-      <InstagramGallery accessToken="IGQVJYN3FscUoydVcwbGpQSWV6QTFRWDlaenVTNC1pVnhlOC1VcHpFcmcxNHR6TWRIS3B6WjdOaE85blRGamhnc3FGQUVCQ2RiaXhHcXpZATThkUVNnY2RxS1ZALWWg1cUprTE5uTlpLRldiZAXpaMVc4NgZDZD" count={24} />
+      <InstagramGallery accessToken={process.env.REACT_APP_INS_TOKEN} count={24} />
 
     </div>
   );
